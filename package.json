@@ -1,0 +1,21 @@
+{
+  "name": "juliancollinson-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "author": {
+    "name": "Julian Collinson",
+    "email": "julian.collinson1998@gmail.com",
+    "url": "https://github.com/jcollinsondev"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^3.1.4",
+    "astro": "^2.0.17"
+  }
+}
