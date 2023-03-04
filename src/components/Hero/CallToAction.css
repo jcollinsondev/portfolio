@@ -14,7 +14,7 @@
   animation: bounce 2s ease infinite;
 }
 
-.call-to-action:hover [astro-icon] {
+.call-to-action:hover {
   animation: none;
 }
 
