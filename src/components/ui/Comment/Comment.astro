@@ -1,0 +1,11 @@
+---
+import './Comment.css';
+
+export interface Props {
+  value: string;
+}
+
+const { value } = Astro.props;
+---
+
+<span class="comment">{value}</span>

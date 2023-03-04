@@ -1,0 +1,13 @@
+.tag {
+  font-family: var(--font-code);
+}
+
+.tag::before {
+  content: '<';
+  color: var(--neutral-900);
+}
+
+.tag::after {
+  content: ' />';
+  color: var(--neutral-900);
+}

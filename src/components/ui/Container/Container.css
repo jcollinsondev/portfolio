@@ -1,0 +1,15 @@
+.container {
+  width: min(100%, 56rem);
+  margin: auto;
+  padding: 2rem;
+}
+
+.container.fluid {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+}

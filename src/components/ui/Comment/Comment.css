@@ -1,0 +1,8 @@
+.comment {
+  font-family: var(--font-code);
+  color: var(--green-200);
+}
+
+.comment::before {
+  content: '// ';
+}

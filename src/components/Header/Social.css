@@ -1,0 +1,13 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social__link {
+  color: var(--neutral-900);
+}
+
+.social__link [astro-icon]:hover {
+  fill: var(--green-500);
+}

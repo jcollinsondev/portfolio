@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('/fonts/CascadiaCode.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --neutral-100: #000000;
+  --neutral-200: #0b0a0f;
+  --neutral-300: #10101a;
+  --neutral-400: #13121b;
+  --neutral-500: #3e3e3e;
+  --neutral-600: #929292;
+  --neutral-700: #b3b3b3;
+  --neutral-800: #eeeeee;
+  --neutral-900: #ffffff;
+
+  --green-100: #2b3733;
+  --green-200: #435c53;
+  --green-300: #4a816d;
+  --green-400: #3a9f7b;
+  --green-500: #32bf8c;
+  --green-600: #35d89d;
+  --green-700: #25e49f;
+  --green-800: #13e79a;
+  --green-900: #00ffa2;
+
+  --purple-100: #382c39;
+  --purple-200: #553959;
+  --purple-300: #7e4387;
+  --purple-400: #9a3ba9;
+  --purple-500: #ac32bf;
+  --purple-600: #b92acf;
+  --purple-700: #d52cef;
+  --purple-800: #d017ed;
+  --purple-900: #dd00ff;
+
+  /* Size */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2.125rem;
+  --text-3xl: 2.625rem;
+  --text-4xl: 3.5rem;
+  --text-5xl: 6rem;
+
+  /* Font */
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-body: Roboto, var(--font-system);
+  --font-code: Cascadia Code, var(--font-system);
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--neutral-200);
+  color: var(--neutral-900);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.1;
+  font-family: var(--font-brand);
+  font-weight: 600;
+  color: var(--gray-100);
+}
+
+h1 {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  line-height: 85%;
+}
+
+h2 {
+  font-size: var(--text-4xl);
+}
+
+h3 {
+  font-size: var(--text-3xl);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+}
+
+h5 {
+  font-size: var(--text-xl);
+}
+
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: var(--text-4xl);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+  }
+
+  h4 {
+    font-size: var(--text-xl);
+  }
+
+  h5 {
+    font-size: var(--text-md);
+  }
+
+  section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+[astro-icon] {
+  width: 1.5em;
+  height: 1.5em;
+  fill: CurrentColor;
+}
+
+/* Utilities */
+
+@media screen and (max-width: 1000px) {
+  .media-xl {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .media-md {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .media-sm {
+    display: none;
+  }
+}

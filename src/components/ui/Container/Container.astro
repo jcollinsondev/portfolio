@@ -1,0 +1,13 @@
+---
+import './Container.css';
+
+export interface Props {
+  fluid?: boolean;
+}
+
+const { fluid } = Astro.props;
+---
+
+<div class={`container ${fluid ? 'fluid' : ''}`}>
+  <slot />
+</div>

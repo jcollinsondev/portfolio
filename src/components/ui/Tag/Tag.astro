@@ -1,0 +1,11 @@
+---
+import './Tag.css';
+
+export interface Props {
+  value: string;
+}
+
+const { value } = Astro.props;
+---
+
+<span class="tag">{value}</span>

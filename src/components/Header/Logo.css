@@ -1,0 +1,10 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-code);
+  font-size: var(--text-md);
+}
+
+.function {
+  color: var(--green-500);
+}

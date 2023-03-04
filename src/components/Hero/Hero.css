@@ -1,0 +1,22 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.gradient {
+  background: -webkit-linear-gradient(
+    left,
+    var(--green-500),
+    var(--purple-500)
+  );
+  background: -o-linear-gradient(right, var(--green-500), var(--purple-500));
+  background: -moz-linear-gradient(right, var(--green-500), var(--purple-500));
+  background: linear-gradient(to right, var(--green-500), var(--purple-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--neutral-600);
+}
