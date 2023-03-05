@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Container from '@components/ui/Container';
 import Header from '@components/Header';
 import Hero from '@components/Hero';
+import About from '@components/About';
 ---
 
 <Layout title="Julian Collinson Portfolio">
@@ -11,7 +12,8 @@ import Hero from '@components/Hero';
   </Container>
   <main>
     <Container>
-      <Hero />
+      <Hero sectionId="hero" />
+      <About sectionId="about" />
     </Container>
   </main>
 </Layout>

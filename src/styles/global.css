@@ -111,11 +111,6 @@ h5 {
   font-size: var(--text-xl);
 }
 
-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 @media screen and (max-width: 600px) {
   h1 {
     font-size: var(--text-4xl);
@@ -135,11 +130,6 @@ section {
 
   h5 {
     font-size: var(--text-md);
-  }
-
-  section {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
 }
 

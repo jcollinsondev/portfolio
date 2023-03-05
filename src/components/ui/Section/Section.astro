@@ -1,0 +1,21 @@
+---
+import './Section.css';
+import Tag from '@components/ui/Tag';
+import Comment from '@components/ui/Comment';
+
+export interface Props {
+  sectionId: string;
+  title: string;
+  subtitle: string;
+}
+
+const { sectionId, title, subtitle } = Astro.props;
+---
+
+<section id={sectionId} class="section">
+  <div class="section__title-container">
+    <h4 class="section__title"><Tag value={title} /></h4>
+    <Comment value={subtitle} />
+  </div>
+  <slot />
+</section>

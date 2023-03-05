@@ -1,0 +1,19 @@
+.section {
+  margin-bottom: 4rem;
+}
+
+.section__title-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.section__title {
+  color: var(--green-500);
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    margin-bottom: 2rem;
+  }
+}

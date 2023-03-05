@@ -1,0 +1,12 @@
+---
+import './Skills.css';
+
+const skills = ['Typescript', 'NodeJS', 'React', 'SQL', 'MongoDB'];
+---
+
+<div class="skills">
+  <h5>Skills</h5>
+  <ul class="skills__list">
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+</div>

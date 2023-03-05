@@ -1,0 +1,34 @@
+.about-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about__image {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.about__image img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.about__image label {
+  color: var(--neutral-600);
+  font-size: var(--text-sm);
+  width: 10rem;
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+}

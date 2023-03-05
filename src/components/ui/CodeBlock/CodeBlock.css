@@ -1,0 +1,13 @@
+.code-block {
+  color: var(--neutral-700);
+  font-family: var(--font-code);
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+.code-block .lines {
+  color: var(--neutral-500);
+  padding: 0;
+  list-style: none;
+}

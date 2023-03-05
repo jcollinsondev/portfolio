@@ -1,9 +1,15 @@
 ---
 import './Hero.css';
 import CallToAction from './CallToAction.astro';
+
+export interface Props {
+  sectionId: string;
+}
+
+const { sectionId } = Astro.props;
 ---
 
-<section class="hero">
+<section id={sectionId} class="hero">
   <h1>I craft <span class="gradient">awesome</span> experiences</h1>
   <p class="subtitle">
     Hi! I am Julian. I have been working as a Full-stack Developer since 2019, I
