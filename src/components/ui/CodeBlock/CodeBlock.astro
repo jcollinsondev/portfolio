@@ -14,7 +14,8 @@ const { value } = Astro.props;
 </div>
 
 <script>
-  setTimeout(setLines, 200);
+  setLines();
+  setTimeout(setLines, 400);
 
   let timeout;
   window.onresize = () => {

@@ -1,0 +1,7 @@
+.icon-link {
+  color: CurrentColor;
+}
+
+.icon-link [astro-icon]:hover {
+  fill: var(--green-500);
+}

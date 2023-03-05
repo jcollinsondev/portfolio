@@ -1,0 +1,25 @@
+---
+import './ProjectLinks.css';
+import { IconLink } from '@components/ui';
+
+import IProject from './project.interface';
+
+export interface Props {
+  links: IProject['links'];
+}
+
+const { links } = Astro.props;
+---
+
+<div class="project__links">
+  {
+    links.github && (
+      <IconLink icon="github" href={links.github} target="_blank" />
+    )
+  }
+  {
+    links.website && (
+      <IconLink icon="new-window" href={links.website} target="_blank" />
+    )
+  }
+</div>

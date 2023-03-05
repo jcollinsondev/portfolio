@@ -1,0 +1,31 @@
+.project {
+  background-color: var(--neutral-400);
+  border-radius: 0.5rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.project__stack .pill {
+  background-color: var(--green-500);
+  color: var(--neutral-200);
+  border-radius: 1rem;
+  font-size: var(--text-sm);
+  font-family: var(--font-code);
+  padding: 0 0.5rem;
+}

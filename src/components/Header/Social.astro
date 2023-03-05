@@ -1,15 +1,12 @@
 ---
 import './Social.css';
-import { Icon } from 'astro-icon';
+import { IconLink } from '@components/ui';
+
+const github = 'https://github.com/jcollinsondev';
+const linkedin = 'https://www.linkedin.com/in/julian-collinson-b9825a173/';
 ---
 
 <div class="social">
-  <a class="social__link" href="https://github.com/jcollinsondev"
-    ><Icon name="github" /></a
-  >
-  <a
-    class="social__link"
-    href="https://www.linkedin.com/in/julian-collinson-b9825a173/"
-    ><Icon name="linkedin" /></a
-  >
+  <IconLink icon="github" href={github} target="_blank" />
+  <IconLink icon="linkedin" href={linkedin} target="_blank" />
 </div>

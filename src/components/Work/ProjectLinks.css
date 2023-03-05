@@ -1,0 +1,6 @@
+.project__links {
+  display: flex;
+  gap: 1rem;
+  font-size: var(--text-sm);
+  color: var(--neutral-600);
+}

@@ -1,0 +1,14 @@
+---
+import './IconLink.css';
+import { Icon } from 'astro-icon';
+
+export interface Props {
+  icon: string;
+  href: string;
+  target?: string;
+}
+
+const { icon, href, target = '_self' } = Astro.props;
+---
+
+<a class="icon-link" href={href} target={target}><Icon name={icon} /></a>

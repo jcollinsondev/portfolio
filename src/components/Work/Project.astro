@@ -1,0 +1,26 @@
+---
+import './Project.css';
+import { CodeBlock } from '@components/ui';
+
+import IProject from './project.interface';
+import ProjectLinks from './ProjectLinks.astro';
+
+export interface Props {
+  project: IProject;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="project">
+  <div class="project__header">
+    <h5>{project.name}</h5>
+    <ProjectLinks links={project.links} />
+  </div>
+  <div class="project__body">
+    <CodeBlock value={project.description} />
+  </div>
+  <ul class="project__stack">
+    {project.stack.map((tech) => <li class="pill">{tech}</li>)}
+  </ul>
+</div>
