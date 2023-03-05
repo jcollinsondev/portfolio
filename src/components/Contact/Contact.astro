@@ -1,0 +1,37 @@
+---
+import './Contact.css';
+import { Section } from '@components/ui';
+
+export interface Props {
+  sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+
+const title = 'Contact';
+const subtitle = 'Lets get in touch :)';
+
+const email = 'julian.collinson1998@gmail.com';
+
+const github = 'https://github.com/jcollinsondev';
+const linkedin = 'https://www.linkedin.com/in/julian-collinson-b9825a173/';
+---
+
+<Section sectionId={sectionId} title={title} subtitle={subtitle}>
+  <div class="contact-container">
+    <div class="contact">
+      <div>
+        <label>Email</label>
+        <span>{email}</span>
+      </div>
+      <div>
+        <label>Socials</label>
+        <a href={github} target="_blank">GitHub</a>
+        <a href={linkedin} target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="contact__action">
+      <button>Sat Hello</button>
+    </div>
+  </div>
+</Section>
