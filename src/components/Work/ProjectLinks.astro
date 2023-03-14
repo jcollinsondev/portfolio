@@ -18,6 +18,11 @@ const { links } = Astro.props;
     )
   }
   {
+    links.figma && (
+      <IconLink icon="figma-base" href={links.figma} target="_blank" />
+    )
+  }
+  {
     links.website && (
       <IconLink icon="new-window" href={links.website} target="_blank" />
     )
