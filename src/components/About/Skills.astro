@@ -1,12 +1,29 @@
 ---
 import './Skills.css';
+import { Icon } from 'astro-icon';
 
-const skills = ['Typescript', 'NodeJS', 'React', 'SQL', 'MongoDB'];
+const skills = [
+  { title: 'Typescript', icon: 'typescript' },
+  { title: 'NodeJs', icon: 'nodejs' },
+  { title: '.NET', icon: 'dotnet' },
+  { title: 'ReactJs', icon: 'react' },
+  { title: 'Angular', icon: 'angular' },
+  { title: 'SQL', icon: 'db' },
+  { title: 'MongoDB', icon: 'mongodb' },
+  { title: 'Figma', icon: 'figma' },
+];
 ---
 
 <div class="skills">
   <h5>Skills</h5>
   <ul class="skills__list">
-    {skills.map((skill) => <li>{skill}</li>)}
+    {
+      skills.map(({ title, icon }) => (
+        <li class="skill">
+          <Icon name={icon} />
+          <span class="skill__title">{title}</span>
+        </li>
+      ))
+    }
   </ul>
 </div>

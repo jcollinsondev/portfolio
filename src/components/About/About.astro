@@ -23,11 +23,11 @@ const aboutMe =
   <div class="about-container">
     <div class="about">
       <CodeBlock value={aboutMe} />
-      <Skills />
+      <div class="about__image">
+        <img src={bugCatcher} alt="Photo of me catching bugs." />
+        <label>A photo of me while catching bugs in the code.</label>
+      </div>
     </div>
-    <div class="about__image">
-      <img src={bugCatcher} alt="Photo of me catching bugs." />
-      <label>A photo of me while catching bugs in the code.</label>
-    </div>
+    <Skills />
   </div>
 </Section>

@@ -1,25 +1,3 @@
-.about-container {
-  display: flex;
-  gap: 2rem;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.about__image {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-}
-
-.about__image img {
-  height: 10rem;
-  width: 10rem;
-}
-
 .contact-container {
   display: flex;
   justify-content: space-between;
