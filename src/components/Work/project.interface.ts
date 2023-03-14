@@ -5,6 +5,7 @@ export default interface IProject {
     website?: string;
     github?: string;
     figma?: string;
+    npm?: string;
   };
   stack: string[];
 }

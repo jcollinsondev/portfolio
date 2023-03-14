@@ -2,8 +2,8 @@
 import './Work.css';
 import { Section } from '@components/ui';
 
-import IProject from './project.interface';
 import Project from './Project.astro';
+import projects from './projects';
 
 export interface Props {
   sectionId: string;
@@ -13,22 +13,10 @@ const { sectionId } = Astro.props;
 
 const title = 'Work';
 const subtitle = 'A selection of projects I am proud of ';
-
-const sampleProject: IProject = {
-  name: 'Project',
-  description:
-    'Lorem ipsum dolor sit amet consectetur. Justo pharetra nec non velit viverra semper. Donec nec quisque enim tristique feugiat nunc urna nunc. ',
-  links: {
-    website: '#',
-    github: '#',
-    figma: '#',
-  },
-  stack: ['typescript', 'NodeJS', 'React'],
-};
 ---
 
 <Section sectionId={sectionId} title={title} subtitle={subtitle}>
   <div class="projects">
-    {Array.from({ length: 4 }).map(() => <Project project={sampleProject} />)}
+    {projects.map((project) => <Project project={project} />)}
   </div>
 </Section>

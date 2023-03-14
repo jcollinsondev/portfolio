@@ -12,6 +12,7 @@ const { links } = Astro.props;
 ---
 
 <div class="project__links">
+  {links.npm && <IconLink icon="npm" href={links.npm} target="_blank" />}
   {
     links.github && (
       <IconLink icon="github" href={links.github} target="_blank" />
