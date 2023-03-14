@@ -31,7 +31,19 @@ const linkedin = 'https://www.linkedin.com/in/julian-collinson-b9825a173/';
       </div>
     </div>
     <div class="contact__action">
-      <button>Say Hello</button>
+      <button id="say-hello">Say Hello</button>
     </div>
   </div>
 </Section>
+
+<script>
+  const contactButton = document.getElementById('say-hello');
+  contactButton.addEventListener('click', sendEmail);
+
+  function sendEmail() {
+    const email = 'contact@jcollinson.dev';
+    const subject = 'First contact';
+    const emailBody = 'Hi Julian,';
+    document.location = `mailto:${email}?subject=${subject}&body=${emailBody}`;
+  }
+</script>
