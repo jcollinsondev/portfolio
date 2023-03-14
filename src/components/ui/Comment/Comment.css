@@ -1,8 +1,12 @@
 .comment {
   font-family: var(--font-code);
   color: var(--green-200);
+  display: flex;
+  gap: 1rem;
+  align-items: start;
 }
 
-.comment::before {
-  content: '// ';
+.comment .lines {
+  padding: 0;
+  list-style: none;
 }

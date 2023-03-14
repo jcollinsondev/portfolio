@@ -14,14 +14,20 @@ const { value } = Astro.props;
 </div>
 
 <script>
-  setLines();
-  setTimeout(setLines, 400);
+  window.addEventListener('load', initSetLines());
+  window.addEventListener('resize', initSetLines());
 
-  let timeout;
-  window.onresize = () => {
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(setLines, 200);
-  };
+  function initSetLines(milliseconds = 200) {
+    let timeout;
+    return () => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        // The first time it get the wrong div height
+        setLines();
+        setLines();
+      }, milliseconds);
+    };
+  }
 
   function setLines() {
     const blocks = [...document.getElementsByClassName('code-block')];

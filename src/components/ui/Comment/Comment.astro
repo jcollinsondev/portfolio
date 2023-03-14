@@ -8,4 +8,48 @@ export interface Props {
 const { value } = Astro.props;
 ---
 
-<span class="comment">{value}</span>
+<div class="comment">
+  <ul class="lines"></ul>
+  <p>{value}</p>
+</div>
+
+<script>
+  window.addEventListener('load', initSetLines());
+  window.addEventListener('resize', initSetLines());
+
+  function initSetLines(milliseconds = 200) {
+    let timeout;
+    return () => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        // The first time it get the wrong div height
+        setLines();
+        setLines();
+      }, milliseconds);
+    };
+  }
+
+  function setLines() {
+    const blocks = [...document.getElementsByClassName('comment')];
+    blocks.forEach((block) => {
+      const [linesCounter] = block.getElementsByClassName('lines');
+      const [p] = block.getElementsByTagName('p');
+      const lines = countLines(p);
+
+      linesCounter.innerHTML = '';
+
+      Array.from({ length: lines }, (_, i) => ++i).forEach(() => {
+        const lineCounter = document.createElement('li');
+        lineCounter.appendChild(document.createTextNode('//'));
+        linesCounter.appendChild(lineCounter);
+      });
+    });
+  }
+
+  function countLines(el) {
+    const elementStyle = window.getComputedStyle(el);
+    const divHeight = el.offsetHeight;
+    const lineHeight = parseInt(elementStyle.lineHeight);
+    return divHeight / lineHeight;
+  }
+</script>
