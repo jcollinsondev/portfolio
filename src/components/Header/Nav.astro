@@ -1,10 +1,17 @@
 ---
 import './Nav.css';
-import { Tag } from '@components/ui';
+
+import { Tag, LinkToSection } from '@components/ui';
 ---
 
 <nav class="nav">
-  <a class="nav__link" href="#about"><Tag value="About" /></a>
-  <a class="nav__link" href="#work"><Tag value="Work" /></a>
-  <a class="nav__link" href="#contact"><Tag value="Contact" /></a>
+  <div class="nav__link">
+    <LinkToSection sectionId="about"><Tag value="About" /></LinkToSection>
+  </div>
+  <div class="nav__link">
+    <LinkToSection sectionId="work"><Tag value="Work" /></LinkToSection>
+  </div>
+  <div class="nav__link">
+    <LinkToSection sectionId="contact"><Tag value="Contact" /></LinkToSection>
+  </div>
 </nav>

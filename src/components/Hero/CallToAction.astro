@@ -1,10 +1,14 @@
 ---
 import './CallToAction.css';
+
 import { Icon } from 'astro-icon';
+import { LinkToSection } from '@components/ui';
 ---
 
 <div>
-  <button class="call-to-action bounce"
-    >Check Out My Work <Icon name="arrow-right" /></button
-  >
+  <LinkToSection sectionId="work">
+    <div class="call-to-action bounce">
+      Check Out My Work <Icon name="arrow-right" />
+    </div>
+  </LinkToSection>
 </div>

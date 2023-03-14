@@ -1,0 +1,27 @@
+---
+import './LinkToSection.css';
+
+export interface Props {
+  sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+---
+
+<a class="linktosection" data-section={sectionId}>
+  <slot />
+</a>
+
+<script>
+  window.addEventListener('load', setLinkToSection);
+
+  function setLinkToSection() {
+    const links = [...document.getElementsByClassName('linktosection')];
+    links.forEach((link) => link.addEventListener('click', goToSection));
+  }
+
+  function goToSection() {
+    const section = document.getElementById(this.dataset.section);
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
