@@ -4,7 +4,7 @@ const projects: IProject[] = [
   {
     name: 'TypedApiMapper',
     description:
-      'Type safe and organized client to map your API. Allows you to create an easy to used mapper to call all your endpoints with the exact input and output types you need automatically.',
+      'Type safe and organized client to map your API. It allows you to create an easy to use mapper to call all your endpoints with the exact input and output types you need automatically.',
     links: {
       npm: 'https://www.npmjs.com/package/typed-api-mapper',
       github: 'https://github.com/jcollinsondev/TypedApiMapper',
